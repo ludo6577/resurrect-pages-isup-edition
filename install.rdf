@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
-    <em:id>{0c8fbd76-bdeb-4c52-9b24-d587ce7b9dc3}</em:id>
-    <em:name>Resurrect Pages</em:name>
+    <em:id>resurrect-pages@albirew.fr</em:id>
+    <em:name>Resurrect Pages (isup edition)</em:name>
     <em:version>2.1</em:version>
     <em:description>Resurrect dead pages, by finding their ghosts.</em:description>
 
     <em:homepageURL>https://github.com/Albirew/resurrect-pages</em:homepageURL>
     <em:iconURL>chrome://resurrect/skin/em-icon.png</em:iconURL>
 
-    <em:creator>Anthony Lieuallen</em:creator>
+    <em:creator>Albirew</em:creator>
     <em:contributor>Translators from BabelZilla.org</em:contributor>
 
     <em:targetApplication>
