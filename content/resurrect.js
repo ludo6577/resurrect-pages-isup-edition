@@ -33,6 +33,7 @@ var resurrect={
     if (contentDoc.documentURI.match(/^about:neterror/)) {
       // Inject our content...
       var xhr = new XMLHttpRequest();
+      // next must be synchronous, else, panel wont show in neterror page (TypeError: xhr.responseXML is null)
       xhr.open('GET', 'chrome://resurrect/content/netError.xhtml', false);
       xhr.send(null);
       var resurrectFieldset = xhr.responseXML.getElementById('resurrect');
@@ -171,7 +172,7 @@ var resurrect={
       xhr.open('GET',
           'http://api.search.yahoo.com/WebSearchService/V1/'+
           'webSearch?appid=firefox-resurrect&query='+encUrl+'&results=1',
-          false);
+          true);
       xhr.send(null);
 
       try {
@@ -189,7 +190,7 @@ var resurrect={
           '?AppId=FD382E93B5ABC456C5E34C238A906CAB1E6F9875'+
           '&Query=url:'+encUrl+
           '&Sources=web&Web.Count=1',
-          false);
+          true);
       xhr.send(null);
 
       try {
@@ -210,7 +211,7 @@ var resurrect={
           ].join('');
 
       var xhr=new XMLHttpRequest();
-      xhr.open('GET', apiUrl, false);
+      xhr.open('GET', apiUrl, true);
       xhr.send(null);
 
       try {
