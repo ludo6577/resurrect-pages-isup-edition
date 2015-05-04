@@ -3,7 +3,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>resurrect-pages@albirew.fr</em:id>
     <em:name>Resurrect Pages (isup edition)</em:name>
-    <em:version>2.1</em:version>
+    <em:version>2.1.1</em:version>
     <em:description>Resurrect dead pages, by finding their ghosts.</em:description>
 
     <em:homepageURL>https://github.com/Albirew/resurrect-pages</em:homepageURL>

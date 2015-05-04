@@ -30,6 +30,11 @@ Hit back and try another one!
 
 # Changelog
 
+ * Version 2.1.1 (May xx, 2015)
+   * Requests synchronous
+   * Typo in some languages for Gigablast
+   * PLANNED: sanitize remote content
+   * PLANNED: removeEventListener()
  * Version 2.1 (Sep 19, 2013)
    * Firefox 22+ compatibility
    * Added isup.me provider
