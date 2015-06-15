@@ -1,3 +1,4 @@
+[Resurrect-pages on Mozilla Addons](https://addons.mozilla.org/firefox/addon/resurrect-pages-isup-edition/)
 
 # Documentation
 
