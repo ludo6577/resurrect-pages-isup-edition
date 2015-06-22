@@ -30,13 +30,18 @@ Hit back and try another one!
    * With the keyboard: press `Ctrl-Shift-U`
    * Directly in the net error ("Firefox could not load this page...") page.
 
+# PLANNED
+ * sanitize remote content
+ * removeEventListener()
+ * repair gigablast
+   
 # Changelog
 
- * Version 2.1.1 (May xx, 2015)
+ * Version 2.1.1 (June 22, 2015)
    * Requests synchronous
    * Typo in some languages for Gigablast
-   * PLANNED: sanitize remote content
-   * PLANNED: removeEventListener()
+   * removed yahoo cache (yahoo uses bing cache now)
+   * removed coral CDN (almost alsways dead)
  * Version 2.1 (Sep 19, 2013)
    * Firefox 22+ compatibility
    * Added isup.me provider

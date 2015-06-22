@@ -154,10 +154,6 @@ var resurrect={
     var encUrl=encodeURIComponent(rawUrl);
 
     switch (mirror) {
-    case 'coralcdn':
-      gotoUrl=rawUrl.substring(0, 8)+
-          rawUrl.substring(8).replace(/\//, '.nyud.net/');
-      break;
     case 'google':
       gotoUrl='http://www.google.com/search?q=cache:'+encUrl;
       break;
@@ -166,22 +162,6 @@ var resurrect={
       break;
     case 'archive':
       gotoUrl='http://wayback.archive.org/web/*/'+rawUrl;
-      break;
-    case 'yahoo':
-      var xhr=new XMLHttpRequest();
-      xhr.open('GET',
-          'http://api.search.yahoo.com/WebSearchService/V1/'+
-          'webSearch?appid=firefox-resurrect&query='+encUrl+'&results=1',
-          true);
-      xhr.send(null);
-
-      try {
-        var c=xhr.responseXML.getElementsByTagName('Cache');
-        gotoUrl=c[0].firstChild.textContent;
-      } catch (e ) {
-        gotoUrl='http://search.yahoo.com/search?p='+encUrl;
-      }
-
       break;
     case 'bing':
       var xhr=new XMLHttpRequest();
