@@ -34,14 +34,14 @@ Hit back and try another one!
  * sanitize remote content
  * removeEventListener()
  * repair gigablast
+ * requests synchronous (may need complete rewrite)
    
 # Changelog
 
  * Version 2.1.1 (June 22, 2015)
-   * Requests synchronous
    * Typo in some languages for Gigablast
-   * removed yahoo cache (yahoo uses bing cache now)
-   * removed coral CDN (almost alsways dead)
+   * Removed yahoo cache (yahoo uses bing cache now)
+   * Removed coral CDN (almost alsways dead)
  * Version 2.1 (Sep 19, 2013)
    * Firefox 22+ compatibility
    * Added isup.me provider
