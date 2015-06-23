@@ -11,12 +11,10 @@ Or, the easier route, use this extension.
 ## Features 
 
  * Searches through seven page cache/mirrors:
-   * [CoralCDN](http://www.coralcdn.org/)
    * [Google Cache](http://www.google.com/) (plus text-only version)
-   * [Yahoo! Cache](http://search.yahoo.com/)
    * [The Internet Archive](http://web.archive.org/)
    * [MSN Cache](http://search.msn.com/)
-   * [Gigablast Cache](http://www.gigablast.com/)
+   * [Gigablast Cache](http://www.gigablast.com/) (temporary(?) disabled since code not working anymore)
    * [WebCite](http://www.webcitation.org/)
    * [Down for everyone?](http://www.isup.me/)
 
@@ -38,6 +36,9 @@ Hit back and try another one!
    
 # Changelog
 
+ * Version 2.1.2 (xx yy, 2105)
+   * Removed remnants of yahoo and coral code
+   * temporary(?) disabled gigablast since code not working anymore
  * Version 2.1.1 (June 22, 2015)
    * Typo in some languages for Gigablast
    * Removed yahoo cache (yahoo uses bing cache now)
