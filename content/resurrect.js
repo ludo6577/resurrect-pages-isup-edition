@@ -208,6 +208,9 @@ var resurrect={
     case 'webcitation':
       gotoUrl='http://webcitation.org/query.php?url='+encUrl;
       break;
+    case 'archiveis':
+      gotoUrl='https://archive.is/'+rawUrl;
+      break;
     case 'isup':
       gotoUrl='http://isup.me/'+rawUrl;
       break;

@@ -16,6 +16,7 @@ Or, the easier route, use this extension.
    * [MSN Cache](http://search.msn.com/)
    * [Gigablast Cache](http://www.gigablast.com/) (temporary(?) disabled since code not working anymore)
    * [WebCite](http://www.webcitation.org/)
+   * [archive.is](https://archive.is/)
    * [Down for everyone?](http://www.isup.me/)
 
 Of course, not every page can be in every cache.
@@ -37,6 +38,8 @@ Hit back and try another one!
 # Changelog
 
  * Version 2.1.2 (xx yy, 2105)
+   * Updated maxversion to Firefox 43
+   * Added archive.is provider
    * Removed remnants of yahoo and coral code
    * temporary(?) disabled gigablast since code not working anymore
  * Version 2.1.1 (June 22, 2015)
