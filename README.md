@@ -37,7 +37,7 @@ Hit back and try another one!
    
 # Changelog
 
- * Version 2.1.2 (xx yy, 2105)
+ * Version 2.1.2 (august 12, 2015)
    * Updated maxversion to Firefox 43
    * Added archive.is provider
    * Removed remnants of yahoo and coral code
