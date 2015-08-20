@@ -13,7 +13,7 @@ Or, the easier route, use this extension.
  * Searches through seven page cache/mirrors:
    * [Google Cache](http://www.google.com/) (plus text-only version)
    * [The Internet Archive](http://web.archive.org/)
-   * [MSN Cache](http://search.msn.com/)
+   * [Bing Cache](http://bing.com/)
    * [Gigablast Cache](http://www.gigablast.com/) (temporary(?) disabled since code not working anymore)
    * [WebCite](http://www.webcitation.org/)
    * [archive.is](https://archive.is/)
@@ -37,6 +37,8 @@ Hit back and try another one!
    
 # Changelog
 
+ * Version 2.1.3
+   * Changed MSN for Bing on readme file (#6)
  * Version 2.1.2 (august 12, 2015)
    * Updated maxversion to Firefox 43
    * Added archive.is provider
