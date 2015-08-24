@@ -156,10 +156,10 @@ var resurrect={
 
     switch (mirror) {
     case 'google':
-      gotoUrl='http://www.google.com/search?q=cache:'+encUrl;
+      gotoUrl='http://webcache.googleusercontent.com/search?&q=cache:'+encUrl;
       break;
     case 'googletext':
-      gotoUrl='http://www.google.com/search?strip=1&q=cache:'+encUrl;
+      gotoUrl='http://webcache.googleusercontent.com/search?strip=1&q=cache::'+encUrl;
       break;
     case 'archive':
       gotoUrl='http://wayback.archive.org/web/*/'+rawUrl;

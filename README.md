@@ -40,6 +40,7 @@ Hit back and try another one!
  * Version 2.1.3
    * Changed MSN for Bing on readme file (#6)
    * Striped protocol from isup.me (#5)
+   * Changed google to googleusercontent for google cache (#2)
  * Version 2.1.2 (august 12, 2015)
    * Updated maxversion to Firefox 43
    * Added archive.is provider
