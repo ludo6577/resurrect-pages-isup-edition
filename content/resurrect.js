@@ -152,6 +152,7 @@ var resurrect={
   selectMirror:function(mirror, ownerDoc, contentDoc, rawUrl) {
     var gotoUrl=null;
     var encUrl=encodeURIComponent(rawUrl);
+    var stripUrl=rawUrl.replace(/.*?:\/\//g, "");
 
     switch (mirror) {
     case 'google':
@@ -212,7 +213,7 @@ var resurrect={
       gotoUrl='https://archive.is/'+rawUrl;
       break;
     case 'isup':
-      gotoUrl='http://isup.me/'+rawUrl;
+      gotoUrl='http://isup.me/'+stripUrl;
       break;
     default:
       return false;
