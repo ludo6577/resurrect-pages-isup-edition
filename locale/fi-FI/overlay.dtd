@@ -4,13 +4,10 @@
 <!ENTITY resurrect.thispage "Palauta tämä sivu...">
 <!ENTITY resurrect.thislink "Palauta tämän linkin kohde">
 <!ENTITY resurrect.fromMirror "Peilipalvelimelta">
-<!ENTITY resurrect.coralcdn "CoralCDN">
 <!ENTITY resurrect.google "Google välimuisti">
 <!ENTITY resurrect.textonly "(vain teksti)">
-<!ENTITY resurrect.yahoo "Yahoo! välimuisti">
 <!ENTITY resurrect.archive "The Internet Archive">
 <!ENTITY resurrect.bing "Bing">
-<!ENTITY resurrect.gigablast "Gigablast">
 <!ENTITY resurrect.webcitation "WebCite">
 <!ENTITY resurrect.archiveis "Archive.is">
 <!ENTITY resurrect.isup "Down for everyone?">

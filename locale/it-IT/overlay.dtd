@@ -4,13 +4,10 @@
 <!ENTITY resurrect.thispage "Resuscita questa pagina...">
 <!ENTITY resurrect.thislink "Resuscita questo link...">
 <!ENTITY resurrect.fromMirror "Mirror da utilizzare:">
-<!ENTITY resurrect.coralcdn "CoralCDN">
 <!ENTITY resurrect.google "Google Cache">
 <!ENTITY resurrect.textonly " (solo testo)">
-<!ENTITY resurrect.yahoo "Yahoo! Cache">
 <!ENTITY resurrect.archive "Internet Archive">
 <!ENTITY resurrect.bing "Bing">
-<!ENTITY resurrect.gigablast "Gigablast">
 <!ENTITY resurrect.webcitation "WebCite">
 <!ENTITY resurrect.archiveis "Archive.is">
 <!ENTITY resurrect.isup "Down for everyone?">
