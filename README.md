@@ -8,13 +8,12 @@ What do we do when a page is dead but we still want to see it?
 Call in the clerics, and perform a resurrection ceremony!
 Or, the easier route, use this extension.
 
-## Features 
+## Features
 
  * Searches through seven page cache/mirrors:
    * [Google Cache](http://www.google.com/) (plus text-only version)
    * [The Internet Archive](http://web.archive.org/)
    * [Bing Cache](http://bing.com/)
-   * [Gigablast Cache](http://www.gigablast.com/) (temporary(?) disabled since code not working anymore)
    * [WebCite](http://www.webcitation.org/)
    * [archive.is](https://archive.is/)
    * [Down for everyone?](http://www.isup.me/)
@@ -37,6 +36,12 @@ Hit back and try another one!
    
 # Changelog
 
+ * Version 3.0.0
+   * Fix layout on error page w.r.t. the "report error" dialog.
+   * Add keyboard accessibility for cache retrieval buttons.
+   * Remove sources: CoralCDN, Yahoo, Gigablast.
+   * Compatibility with multi-process Firefox.
+   * Updated maxversion to Firefox 48
  * Version 2.1.3
    * Changed MSN for Bing on readme file (#6)
    * Striped protocol from isup.me (#5)
