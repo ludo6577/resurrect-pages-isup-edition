@@ -168,7 +168,7 @@ var resurrect={
       gotoUrl='http://webcache.googleusercontent.com/search?strip=1&q=cache::'+encUrl;
       break;
     case 'archive':
-      gotoUrl='http://wayback.archive.org/web/*/'+rawUrl;
+      gotoUrl='http://wayback.archive.org/web/'+rawUrl;
       break;
     case 'bing':
       var xhr=new XMLHttpRequest();
