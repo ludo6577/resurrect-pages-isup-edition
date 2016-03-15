@@ -29,10 +29,8 @@ Hit back and try another one!
    * Directly in the net error ("Firefox could not load this page...") page.
 
 # PLANNED
- * sanitize remote content
- * removeEventListener()
- * repair gigablast
- * requests synchronous (may need complete rewrite)
+ * Complete rewrite to make addon restartless 
+ * Make Bing search to show directly cached page 
    
 # Changelog
 
