@@ -151,18 +151,18 @@ var resurrect={
 
     switch (mirror) {
     case 'google':
-      gotoUrl='http://webcache.googleusercontent.com/search?&q=cache:'+encUrl;
+      gotoUrl='https://webcache.googleusercontent.com/search?&q=cache:'+encUrl;
       break;
     case 'googletext':
-      gotoUrl='http://webcache.googleusercontent.com/search?strip=1&q=cache::'+encUrl;
+      gotoUrl='https://webcache.googleusercontent.com/search?strip=1&q=cache::'+encUrl;
       break;
     case 'archive':
-      gotoUrl='http://wayback.archive.org/web/'+rawUrl;
+      gotoUrl='https://wayback.archive.org/web/'+rawUrl;
       break;
     case 'bing':
       var xhr=new XMLHttpRequest();
       xhr.open('GET',
-          'http://api.search.live.net/xml.aspx'+
+          'https://api.bing.com/xml.aspx'+
           '?AppId=FD382E93B5ABC456C5E34C238A906CAB1E6F9875'+
           '&Query=url:'+encUrl+
           '&Sources=web&Web.Count=1',
@@ -173,7 +173,7 @@ var resurrect={
         var c=xhr.responseXML.getElementsByTagName('web:CacheUrl');
         gotoUrl=c[0].textContent;
       } catch (e) {
-        gotoUrl='http://www.bing.com/search?q=url:'+encUrl;
+        gotoUrl='https://www.bing.com/search?q=url:'+encUrl;
       }
 
       break;
