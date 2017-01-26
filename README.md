@@ -36,6 +36,7 @@ Hit back and try another one!
  * Version 3.0.1
    * Now open new tabs in background (#7)
    * Fixed wayback.archive.org to web.archive.org
+   * Added another archive.org provider to list all available cached versions instead of going directly to latest
    * Updated maxversion to Firefox 54
  * Version 3.0.0
    * Fix layout on error page w.r.t. the "report error" dialog
