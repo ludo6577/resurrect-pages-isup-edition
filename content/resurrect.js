@@ -193,7 +193,7 @@ var resurrect={
 
     if (gotoUrl) {
       if (ownerDoc.getElementById('targetTab').getAttribute('selected')) {
-        window.opener.openUILinkIn(gotoUrl, 'tab');
+        window.opener.openUILinkIn(gotoUrl, 'tabshifted');
       } else if (ownerDoc.getElementById('targetWin').getAttribute('selected')) {
         // the setTimeout keeps focus from returning to the opener
         setTimeout(function(){
