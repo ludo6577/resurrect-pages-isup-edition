@@ -33,12 +33,15 @@ Hit back and try another one!
  * Make Bing search to show directly cached page 
    
 # Changelog
-
+ * Version 3.0.1
+   * Now open new tabs in background (#7)
+   * Fixed wayback.archive.org to web.archive.org
+   * Updated maxversion to Firefox 54
  * Version 3.0.0
-   * Fix layout on error page w.r.t. the "report error" dialog.
-   * Add keyboard accessibility for cache retrieval buttons.
-   * Remove sources: CoralCDN, Yahoo, Gigablast.
-   * Compatibility with multi-process Firefox.
+   * Fix layout on error page w.r.t. the "report error" dialog
+   * Add keyboard accessibility for cache retrieval buttons
+   * Remove sources: CoralCDN, Yahoo, Gigablast
+   * Compatibility with multi-process Firefox
    * Updated maxversion to Firefox 48
  * Version 2.1.3
    * Changed MSN for Bing on readme file (#6)
