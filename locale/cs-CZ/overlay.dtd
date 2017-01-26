@@ -6,7 +6,8 @@
 <!ENTITY resurrect.fromMirror "Vybrat mirror:">
 <!ENTITY resurrect.google "Google">
 <!ENTITY resurrect.textonly "(prostý text)">
-<!ENTITY resurrect.archive "Internet Archive">
+<!ENTITY resurrect.archive "Internet Archive (latest)">
+<!ENTITY resurrect.archiveall "Internet Archive (list)">
 <!ENTITY resurrect.bing "Bing">
 <!ENTITY resurrect.webcitation "WebCite">
 <!ENTITY resurrect.archiveis "Archive.is">

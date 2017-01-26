@@ -6,7 +6,8 @@
 <!ENTITY resurrect.fromMirror "Do espelho">
 <!ENTITY resurrect.google "Cache do Google">
 <!ENTITY resurrect.textonly "(só texto)">
-<!ENTITY resurrect.archive "Arquivo de internet">
+<!ENTITY resurrect.archive "Arquivo de internet (latest)">
+<!ENTITY resurrect.archiveall "Arquivo de internet (list)">
 <!ENTITY resurrect.bing "Bing">
 <!ENTITY resurrect.webcitation "WebCite">
 <!ENTITY resurrect.archiveis "Archive.is">

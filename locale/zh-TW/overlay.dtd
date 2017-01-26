@@ -6,7 +6,8 @@
 <!ENTITY resurrect.fromMirror "映像來源">
 <!ENTITY resurrect.google "Google">
 <!ENTITY resurrect.textonly "(限文字)">
-<!ENTITY resurrect.archive "Internet Archive">
+<!ENTITY resurrect.archive "Internet Archive (latest)">
+<!ENTITY resurrect.archiveall "Internet Archive (list)">
 <!ENTITY resurrect.bing "Bing">
 <!ENTITY resurrect.webcitation "WebCite">
 <!ENTITY resurrect.archiveis "Archive.is">

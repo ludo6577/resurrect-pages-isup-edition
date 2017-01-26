@@ -159,6 +159,9 @@ var resurrect={
     case 'archive':
       gotoUrl='https://web.archive.org/web/'+rawUrl;
       break;
+    case 'archiveall':
+      gotoUrl='https://web.archive.org/web/*/'+rawUrl;
+      break;
     case 'bing':
       var xhr=new XMLHttpRequest();
       xhr.open('GET',

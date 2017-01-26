@@ -6,7 +6,8 @@
 <!ENTITY resurrect.fromMirror "복사본으로 부터">
 <!ENTITY resurrect.google "Google 캐쉬">
 <!ENTITY resurrect.textonly "(본문 만)">
-<!ENTITY resurrect.archive "인터넷 아카이브">
+<!ENTITY resurrect.archive "인터넷 아카이브 (latest)">
+<!ENTITY resurrect.archiveall "인터넷 아카이브 (list)">
 <!ENTITY resurrect.bing "Bing">
 <!ENTITY resurrect.webcitation "WebCite">
 <!ENTITY resurrect.archiveis "Archive.is">
