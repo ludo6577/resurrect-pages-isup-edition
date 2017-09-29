@@ -1,4 +1,4 @@
-[Resurrect-pages on Mozilla Addons](https://addons.mozilla.org/firefox/addon/resurrect-pages-isup-edition/)
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENCE) - [![MAXVERSION](https://img.shields.io/badge/Firefox-57+-green.svg)](https://addons.mozilla.org/firefox/addon/resurrect-pages-isup-edition/)
 
 # Documentation
 
@@ -30,6 +30,8 @@ Hit back and try another one!
  * Version 5
    * Merged with WebExtensions version from Arrantius (#3 #10)
      * Does not include netError page ([not currently possible](http://bugzil.la/1376793))
+   * Added French locale
+   * Updated Google icon
    * Cleaned up host list (#2)
  * Version 3.0.1
    * Now open new tabs in background (#7)
@@ -114,7 +116,3 @@ Hit back and try another one!
    * Integrate into the net error page.
  * Version 0.5.1
    * Bugfix, broken shortcut key.
-
-# License
-
-Resurrect Pages is released under the MIT license.
