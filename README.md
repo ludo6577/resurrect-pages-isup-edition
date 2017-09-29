@@ -13,7 +13,6 @@ Or, the easier route, use this extension.
  * Searches through seven page cache/mirrors:
    * [Google Cache](http://www.google.com/) (plus text-only version)
    * [The Internet Archive](http://web.archive.org/)
-   * [Bing Cache](http://bing.com/)
    * [WebCite](http://www.webcitation.org/)
    * [archive.is](https://archive.is/)
    * [Down for everyone?](http://www.isup.me/)
@@ -26,13 +25,12 @@ Hit back and try another one!
    * In the context (right-click) menu for the current page, and for all links.
    * In the toolbar, just customize it to drag the button in.
    * With the keyboard: press `Ctrl-Shift-U`
-   * Directly in the net error ("Firefox could not load this page...") page.
 
-# PLANNED
- * Complete rewrite to make addon restartless 
- * Make Bing search to show directly cached page 
-   
 # Changelog
+ * Version 5
+   * Merged with WebExtensions version from Arrantius (#3 #10)
+     * Does not include netError page ([not currently possible](http://bugzil.la/1376793))
+   * Cleaned up host list (#2)
  * Version 3.0.1
    * Now open new tabs in background (#7)
    * Fixed wayback.archive.org to web.archive.org
