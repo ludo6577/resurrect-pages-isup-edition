@@ -1,4 +1,6 @@
-[Resurrect-pages on Mozilla Addons](https://addons.mozilla.org/firefox/addon/resurrect-pages-isup-edition/)
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENCE) - [![MAXVERSION](https://img.shields.io/badge/Firefox-<57-red.svg)](https://addons.mozilla.org/fr/firefox/addon/resurrect-pages-isup-edition/versions/?page=1#version-3.0.0)
+
+**THIS BRANCH IS STALLED TO PERMIT PEOPLE USING OLDER VERSION OF FIREFOX TO STILL USE THIS ADDON, SEE RELEASES.**
 
 # Documentation
 
@@ -7,6 +9,7 @@ Powerhouse sites like Slashdot and Digg can bring a server to its knees.
 What do we do when a page is dead but we still want to see it?
 Call in the clerics, and perform a resurrection ceremony!
 Or, the easier route, use this extension.
+
 
 ## Features
 
@@ -28,10 +31,6 @@ Hit back and try another one!
    * With the keyboard: press `Ctrl-Shift-U`
    * Directly in the net error ("Firefox could not load this page...") page.
 
-# PLANNED
- * Complete rewrite to make addon restartless 
- * Make Bing search to show directly cached page 
-   
 # Changelog
  * Version 3.0.1
    * Now open new tabs in background (#7)
@@ -116,7 +115,3 @@ Hit back and try another one!
    * Integrate into the net error page.
  * Version 0.5.1
    * Bugfix, broken shortcut key.
-
-# License
-
-Resurrect Pages is released under the MIT license.
