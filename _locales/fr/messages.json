@@ -1,0 +1,71 @@
+{
+  "extensionName": {
+    "message": "Resurrect Pages IsUp Edition",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Ressuscite les pages mortes en récupérant leurs fantôme.",
+    "description": "Description of the add-on."
+  },
+
+  "resurrect_page": {
+    "message": "Ressusciter cette page",
+    "description": "Resurrect this page"
+  },
+
+  "resurrect_link": {
+    "message": "Ressusciter ce lien",
+    "description": "Resurrect this link"
+  },
+
+  "resurrectGoogle": {
+    "message": "avec Google",
+    "description": "with Google"
+  },
+
+  "resurrectGoogleText": {
+    "message": "avec Google (texte seul)",
+    "description": "with Google (text only)"
+  },
+
+  "resurrectArchive": {
+    "message": "avec l'Archive Internet",
+    "description": "with The Internet Archive"
+  },
+
+  "resurrectArchiveIs": {
+    "message": "avec archive.is",
+    "description": "with archive.is"
+  },
+
+  "resurrectWebcitation": {
+    "message": "avec WebCite",
+    "description": "with WebCite"
+  },
+
+  "resurrectIsUp": {
+    "message": "Vérifier si le site est mort",
+    "description": "with isup.me"
+  },
+
+  "resurrectConfigCurrentTab": {
+    "message": "dans l'onglet courant",
+    "description": "in the current tab"
+  },
+
+  "resurrectConfigNewTab": {
+    "message": "dans un nouvel onglet",
+    "description": "in a new tab (foreground)"
+  },
+
+  "resurrectConfigBgTab": {
+    "message": "dans un nouvel onglet (en arrière-plan)",
+    "description": "in a new tab (background)"
+  },
+
+  "resurrectConfigNewWindow": {
+    "message": "dans une nouvelle fenêtre",
+    "description": "in a new window"
+  }
+}
