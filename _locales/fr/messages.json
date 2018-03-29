@@ -34,6 +34,11 @@
     "description": "with The Internet Archive"
   },
 
+  "resurrectArchiveList": {
+    "message": "avec l'Archive Internet (historique)",
+    "description": "with The Internet Archive (list all)"
+  },
+
   "resurrectArchiveIs": {
     "message": "avec archive.is",
     "description": "with archive.is"
@@ -42,6 +47,11 @@
   "resurrectWebcitation": {
     "message": "avec WebCite",
     "description": "with WebCite"
+  },
+
+  "resurrectMementoWeb": {
+    "message": "avec Memento Timetravel",
+    "description": "with Memento Timetravel"
   },
 
   "resurrectIsUp": {

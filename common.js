@@ -12,23 +12,28 @@ chrome.storage.local.get('openIn', item => {
   }
 });
 
-function onError(error) {
+function logLastError() {
   if (chrome.runtime.lastError) {
-    console.error('Resurrect error: ', chrome.runtime.lastError);
+    console.error('Resurrect error:', chrome.runtime.lastError);
   }
 }
 
 function genGoogleUrl(url) {
-  return 'https://www.google.com/search?q=cache:'+encodeURIComponent(url);
+  return 'https://www.google.com/search?q=cache:' + encodeURIComponent(url);
 }
 
 function genGoogleTextUrl(url) {
-  return 'https://www.google.com/search?strip=1&q=cache:'+encodeURIComponent(url);
+  return 'https://www.google.com/search?strip=1&q=cache:' + encodeURIComponent(url);
 }
 
 function genIaUrl(url) {
-  let dateStr =(new Date()).toISOString().replace(/-|T|:|\..*/g, '');
+  let dateStr = (new Date()).toISOString().replace(/-|T|:|\..*/g, '');
   return 'https://web.archive.org/web/'+dateStr+'/'+url;
+}
+
+function genIaListUrl(url) {
+  let dateStr = (new Date()).toISOString().replace(/-|T|:|\..*/g, '');
+  return 'https://web.archive.org/web/*/'+url;
 }
 
 function genArchiveIsUrl(url) {
@@ -39,30 +44,36 @@ function genWebCiteUrl(url) {
   return 'http://webcitation.org/query.php?url='+encodeURIComponent(url);
 }
 
+function genMementoUrl(url) {
+  let dateStr = (new Date()).toISOString().replace(/-|T|:|\..*/g, '');
+  return 'http://timetravel.mementoweb.org/list/'
+    + dateStr + '/' +url;
+}
+
 function genIsUpUrl(url) {
   return 'http://isup.me/'+url;
 }
 
 function setOpenIn(where) {
   openIn = where;
-  chrome.storage.local.set({openIn: openIn}, onError);
+  chrome.storage.local.set({openIn: openIn}, logLastError);
   updateContextRadios();
 }
 
 function updateContextRadios() {
   ['page', 'link'].forEach(context => {
     chrome.contextMenus.update(
-        'resurrect-current-tab-' + context,
-        {checked: openIn == openInEnum.CURRENT_TAB});
+      'resurrect-current-tab-' + context,
+      {checked: openIn == openInEnum.CURRENT_TAB});
     chrome.contextMenus.update(
-        'resurrect-new-tab-' + context,
-        {checked: openIn == openInEnum.NEW_TAB});
+      'resurrect-new-tab-' + context,
+      {checked: openIn == openInEnum.NEW_TAB});
     chrome.contextMenus.update(
-        'resurrect-bg-tab-' + context,
-        {checked: openIn == openInEnum.NEW_BGTAB});
+      'resurrect-bg-tab-' + context,
+      {checked: openIn == openInEnum.NEW_BGTAB});
     chrome.contextMenus.update(
-        'resurrect-new-window-' + context,
-        {checked: openIn == openInEnum.NEW_WINDOW});
+      'resurrect-new-window-' + context,
+      {checked: openIn == openInEnum.NEW_WINDOW});
   });
 }
 

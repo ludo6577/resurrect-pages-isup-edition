@@ -10,11 +10,12 @@ Or, the easier route, use this extension.
 
 ## Features
 
- * Searches through seven page cache/mirrors:
+ * Searches through six page cache/mirrors:
    * [Google Cache](http://www.google.com/) (plus text-only version)
    * [The Internet Archive](http://web.archive.org/)
    * [WebCite](http://www.webcitation.org/)
    * [archive.is](https://archive.is/)
+   * [Memento Time Travel](http://timetravel.mementoweb.org/)
    * [Down for everyone?](http://www.isup.me/)
 
 Of course, not every page can be in every cache.
@@ -27,6 +28,11 @@ Hit back and try another one!
    * With the keyboard: press `Ctrl-Shift-U`
 
 # Changelog
+
+ * Version 6
+   * Merged with latest version from Arrantius
+   * Add "list all versions" for The Internet Archive.
+   * Add MementoWeb TimeTravel source.
  * Version 5
    * Merged with WebExtensions version from Arrantius (#3 #10)
      * Does not include netError page ([not currently possible](http://bugzil.la/1376793))

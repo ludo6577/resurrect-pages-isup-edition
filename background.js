@@ -1,64 +1,72 @@
-function onCreated(n) {
-}
-
 chrome.storage.local.get('openIn', item => {
   if (item.openIn) {
     openIn = item.openIn;
   }
 
-  function addResurrectItem(context, i18n, id, icon) {
-    chrome.contextMenus.create({
-      id: 'resurrect-' + id + '-' + context,
-      title: chrome.i18n.getMessage('resurrect' + i18n),
-      icons: {16: 'icons/cacheicons/' + icon + '.png'},
-      contexts: [context],
-      parentId: 'resurrect-' + context
-    }, onCreated);
-  }
-
-  function addConfigItem(context, i18n, where, checked) {
-    chrome.contextMenus.create({
-      id: 'resurrect-' + where + '-' + context,
-      type: 'radio',
-      title: chrome.i18n.getMessage('resurrectConfig' + i18n),
-      contexts: [context],
-      checked: checked,
-      parentId: 'resurrect-' + context
-    }, onCreated);
-  }
-
   ['page', 'link'].forEach(context => {
     chrome.contextMenus.create({
+      contexts: [context],
       id: 'resurrect-' + context,
-      title: chrome.i18n.getMessage('resurrect_' + context),
-      contexts: [context]
-    }, onCreated);
+      title: chrome.i18n.getMessage('resurrect' + i18n) + context,
+    }, logLastError);
 
-    addResurrectItem(context, 'Google', 'google', 'google');
-    addResurrectItem(context, 'GoogleText', 'google-text', 'google');
-    addResurrectItem(context, 'Archive', 'archive', 'waybackmachine');
-    addResurrectItem(context, 'ArchiveIs', 'archiveis', 'archiveis');
-    addResurrectItem(context, 'Webcitation', 'webcitation', 'webcitation');
-    addResurrectItem(context, 'IsUp', 'isup', 'isup');
+    chrome.contextMenus.create({
+      enabled: false,
+      id: 'resurrect-' + where + '-' + context,
+      parentId: 'resurrect-' + context,
+      title: chrome.i18n.getMessage('resurrectConfig' + i18n),
+    });
+
+    for (let [name, id, icon] of [
+      ['Google', 'google', 'google'],
+      ['Google (text only)', 'googletext', 'google'],
+      ['The Internet Archive', 'archive', 'waybackmachine'],
+      ['The Internet Archive (list all)', 'archivelist', 'waybackmachine'],
+      ['archive.is', 'archiveis', 'archiveis'],
+      ['WebCite', 'webcitation', 'webcitation'],
+      ['Memento Timetravel', 'mementoweb', 'mementoweb'],
+      ['isup.me', 'IsUp', 'isup'],
+    ]) {
+      chrome.contextMenus.create({
+        contexts: [context],
+        icons: {16: 'icons/cacheicons/' + icon + '.png'},
+        id: 'resurrect-' + id + '-' + context,
+        parentId: 'resurrect-' + context,
+      title: chrome.i18n.getMessage('resurrect_' + context),
+      }, logLastError);
+    }
 
     chrome.contextMenus.create({
       id: 'resurrect-separator-config-' + context,
       type: 'separator',
       contexts: [context],
       parentId: 'resurrect-' + context
-    }, onCreated);
+    }, logLastError);
 
-    addConfigItem(
-        context, 'CurrentTab', 'current-tab', openIn == openInEnum.CURRENT_TAB);
-    addConfigItem(
-        context, 'NewTab', 'new-tab', openIn == openInEnum.NEW_TAB);
-    addConfigItem(
-        context, 'BgTab', 'bg-tab', openIn == openInEnum.BG_TAB);
-    addConfigItem(
-        context, 'NewWindow', 'new-window', openIn == openInEnum.NEW_WINDOW);
+    chrome.contextMenus.create({
+      enabled: false,
+      id: 'resurrect-in-' + context,
+      parentId: 'resurrect-' + context,
+      title: 'In:',
+    });
+
+    for (let [name, where, checked] of [
+      ['the current tab', 'current-tab', openIn == openInEnum.CURRENT_TAB],
+      ['a new tab (foreground)', 'new-tab', openIn == openInEnum.NEW_TAB],
+      ['a new tab (background)', 'bg-tab', openIn == openInEnum.NEW_BGTAB],
+      ['a new window', 'new-window', openIn == openInEnum.NEW_WINDOW],
+    ]) {
+      chrome.contextMenus.create({
+        id: 'resurrect-' + where + '-' + context,
+        type: 'radio',
+        title: name,
+        contexts: [context],
+        checked: checked,
+        parentId: 'resurrect-' + context
+      }, logLastError);
+    }
   });
 });
-
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
   let id = info.menuItemId;
@@ -68,19 +76,22 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
   } else if (id.endsWith('-link')) {
     url = info.linkUrl;
   }
-
   if (id.startsWith('resurrect-google-')) {
     goToUrl(genGoogleUrl(url), openIn);
   } else if (id.startsWith('resurrect-googletext-')) {
     goToUrl(genGoogleTextUrl(url), openIn);
   } else if (id.startsWith('resurrect-archive-')) {
     goToUrl(genIaUrl(url), openIn);
+  } else if (id.startsWith('resurrect-archivelist-')) {
+    goToUrl(genIaListUrl(url), openIn);
   } else if (id.startsWith('resurrect-archiveis-')) {
     goToUrl(genArchiveIsUrl(url), openIn);
   } else if (id.startsWith('resurrect-isup-')) {
     goToUrl(genIsUpUrl(url), openIn);
   } else if (id.startsWith('resurrect-webcitation-')) {
     goToUrl(genWebCiteUrl(url), openIn);
+  } else if (id.startsWith('resurrect-mementoweb-')) {
+    goToUrl(genMementoUrl(url), openIn);
   } else if (id.startsWith('resurrect-current-tab-')) {
     setOpenIn(openInEnum.CURRENT_TAB);
   } else if (id.startsWith('resurrect-new-tab-')) {
