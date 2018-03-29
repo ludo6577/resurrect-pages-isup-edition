@@ -10,7 +10,7 @@
   "applications": {
     "gecko": {
       "id": "resurrect-pages@albirew.fr",
-      "strict_min_version": "57.0"
+      "strict_min_version": "57"
     }
   },
 
@@ -24,7 +24,8 @@
   "browser_action": {
     "default_icon": "icons/page-32.png",
     "default_title": "__MSG_extensionName__",
-    "default_popup": "popup.htm"
+    "default_popup": "popup.htm",
+    "browser_style":true
   },
 
   "commands": {
