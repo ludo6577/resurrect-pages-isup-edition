@@ -33,6 +33,7 @@ Hit back and try another one!
    * Merged with latest version from Arrantius
    * Add "list all versions" for The Internet Archive.
    * Add MementoWeb TimeTravel source.
+   * Updated icons (HD)
  * Version 5
    * Merged with WebExtensions version from Arrantius (#3 #10)
      * Does not include netError page ([not currently possible](http://bugzil.la/1376793))
