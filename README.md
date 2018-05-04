@@ -29,6 +29,8 @@ Hit back and try another one!
 
 # Changelog
 
+ * Version 6.1
+   * Revived context menu (PR #13 from DenB10)
  * Version 6
    * Merged with latest version from Arrantius
    * Add "list all versions" for The Internet Archive.
