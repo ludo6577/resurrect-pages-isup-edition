@@ -7,32 +7,25 @@ chrome.storage.local.get('openIn', item => {
     chrome.contextMenus.create({
       contexts: [context],
       id: 'resurrect-' + context,
-      title: chrome.i18n.getMessage('resurrect' + i18n) + context,
+      title: chrome.i18n.getMessage('resurrect_' + context),
     }, logLastError);
-
-    chrome.contextMenus.create({
-      enabled: false,
-      id: 'resurrect-' + where + '-' + context,
-      parentId: 'resurrect-' + context,
-      title: chrome.i18n.getMessage('resurrectConfig' + i18n),
-    });
 
     for (let [name, id, icon] of [
       ['Google', 'google', 'google'],
-      ['Google (text only)', 'googletext', 'google'],
-      ['The Internet Archive', 'archive', 'waybackmachine'],
-      ['The Internet Archive (list all)', 'archivelist', 'waybackmachine'],
-      ['archive.is', 'archiveis', 'archiveis'],
-      ['WebCite', 'webcitation', 'webcitation'],
-      ['Memento Timetravel', 'mementoweb', 'mementoweb'],
-      ['isup.me', 'IsUp', 'isup'],
+      ['GoogleText', 'googletext', 'google'],
+      ['Archive', 'archive', 'waybackmachine'],
+      ['ArchiveList', 'archivelist', 'waybackmachine'],
+      ['ArchiveIs', 'archiveis', 'archiveis'],
+      ['WebCitation', 'webcitation', 'webcitation'],
+      ['MementoWeb', 'mementoweb', 'mementoweb'],
+      ['IsUp', 'isup', 'isup'],
     ]) {
       chrome.contextMenus.create({
         contexts: [context],
         icons: {16: 'icons/cacheicons/' + icon + '.png'},
         id: 'resurrect-' + id + '-' + context,
         parentId: 'resurrect-' + context,
-      title: chrome.i18n.getMessage('resurrect_' + context),
+        title: chrome.i18n.getMessage('resurrect' + name),
       }, logLastError);
     }
 
@@ -43,23 +36,16 @@ chrome.storage.local.get('openIn', item => {
       parentId: 'resurrect-' + context
     }, logLastError);
 
-    chrome.contextMenus.create({
-      enabled: false,
-      id: 'resurrect-in-' + context,
-      parentId: 'resurrect-' + context,
-      title: 'In:',
-    });
-
     for (let [name, where, checked] of [
-      ['the current tab', 'current-tab', openIn == openInEnum.CURRENT_TAB],
-      ['a new tab (foreground)', 'new-tab', openIn == openInEnum.NEW_TAB],
-      ['a new tab (background)', 'bg-tab', openIn == openInEnum.NEW_BGTAB],
-      ['a new window', 'new-window', openIn == openInEnum.NEW_WINDOW],
+      ['CurrentTab', 'current-tab', openIn == openInEnum.CURRENT_TAB],
+      ['NewTab', 'new-tab', openIn == openInEnum.NEW_TAB],
+      ['BgTab', 'bg-tab', openIn == openInEnum.NEW_BGTAB],
+      ['NewWindow', 'new-window', openIn == openInEnum.NEW_WINDOW],
     ]) {
       chrome.contextMenus.create({
         id: 'resurrect-' + where + '-' + context,
         type: 'radio',
-        title: name,
+        title: chrome.i18n.getMessage('resurrectConfig' + name),
         contexts: [context],
         checked: checked,
         parentId: 'resurrect-' + context
