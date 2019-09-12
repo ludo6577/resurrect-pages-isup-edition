@@ -29,6 +29,8 @@ Hit back and try another one!
 
 # Changelog
 
+ * Version 6.2
+   * changed archive.is tld to archive.md
  * Version 6.1
    * Revived context menu (PR #13 from DenB10)
  * Version 6

@@ -37,7 +37,7 @@ function genIaListUrl(url) {
 }
 
 function genArchiveIsUrl(url) {
-  return 'https://archive.is/'+url;
+  return 'https://archive.md/'+url;
 }
 
 function genWebCiteUrl(url) {
