@@ -63,21 +63,21 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
     url = info.linkUrl;
   }
   if (id.startsWith('resurrect-google-')) {
-    goToUrl(genGoogleUrl(url), openIn);
+    goToUrl(genGoogleUrl(url), openIn, tab.id);
   } else if (id.startsWith('resurrect-googletext-')) {
-    goToUrl(genGoogleTextUrl(url), openIn);
+    goToUrl(genGoogleTextUrl(url), openIn, tab.id);
   } else if (id.startsWith('resurrect-archive-')) {
-    goToUrl(genIaUrl(url), openIn);
+    goToUrl(genIaUrl(url), openIn, tab.id);
   } else if (id.startsWith('resurrect-archivelist-')) {
-    goToUrl(genIaListUrl(url), openIn);
+    goToUrl(genIaListUrl(url), openIn, tab.id);
   } else if (id.startsWith('resurrect-archiveis-')) {
-    goToUrl(genArchiveIsUrl(url), openIn);
+    goToUrl(genArchiveIsUrl(url), openIn, tab.id);
   } else if (id.startsWith('resurrect-isup-')) {
-    goToUrl(genIsUpUrl(url), openIn);
+    goToUrl(genIsUpUrl(url), openIn, tab.id);
   } else if (id.startsWith('resurrect-webcitation-')) {
-    goToUrl(genWebCiteUrl(url), openIn);
+    goToUrl(genWebCiteUrl(url), openIn, tab.id);
   } else if (id.startsWith('resurrect-mementoweb-')) {
-    goToUrl(genMementoUrl(url), openIn);
+    goToUrl(genMementoUrl(url), openIn, tab.id);
   } else if (id.startsWith('resurrect-current-tab-')) {
     setOpenIn(openInEnum.CURRENT_TAB);
   } else if (id.startsWith('resurrect-new-tab-')) {
