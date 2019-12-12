@@ -29,6 +29,8 @@ Hit back and try another one!
 
 # Changelog
 
+ * Version 6.2.1
+   * Specify openerTabId for opened tabs
  * Version 6.2
    * changed archive.is tld to archive.md
  * Version 6.1
